@@ -53,7 +53,7 @@ class BaseISCOAuth2API(BaseISCAuth):
 
     def user_data(self, access_token, *args, **kwargs):
         """Return user data from ISC API"""
-        url = "https://login.intersystems.com/oauth2/userinfo"
+        url = "https://login.intersystems.com/uat/oauth2/userinfo"
         encoded_response = self.request(
             url, params={"access_token": access_token, "alt": "json"}
         )
